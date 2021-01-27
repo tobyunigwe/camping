@@ -1,0 +1,41 @@
+<%- include partials/header.ejs %>
+<center><h1>Resevering</h1></center>
+<body>
+    <div id="content">
+            <% result.forEach(function(result) { %>
+            <div class="forum-post">
+              ok
+              <p> Heen Datum: <%= result.date1 %></p><br>
+              <p> Terug Datum: <%= result.date2 %></p><br>
+              <p> Personen: <%= result.pers %> </p>
+              <p> Middel: <%= result.options %></p>
+            <% if (result.creator == creator) {%>
+                <a href="/delete_form/<%=result.id%>">Verwijder je reservering</a>
+            <% } %>
+            </div>
+            <% }); %>
+    </div>
+</body>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.forum-post {
+  border: 2px lightcoral solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin: auto;
+  width: 600px;
+}
+
+</style>

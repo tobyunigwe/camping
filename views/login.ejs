@@ -1,0 +1,19 @@
+
+<%- include partials/header.ejs %>
+
+<div id="content">
+        <center><h4>Login</h4></center>
+        <form action="/loginSubmit" method="POST">
+             <input type="text" placeholder="Email" name="email" id="email"><br>
+            <input type="password" placeholder="Voer je wachtwoord in" name="password" id="password"><br>
+            <input type="submit" value="Verstuur">
+        </form>
+</div>
+
+
+<style>
+#content {
+    margin: auto;
+    text-align: center;
+}
+</style>

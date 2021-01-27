@@ -1,0 +1,18 @@
+
+<%- include partials/header.ejs %>
+
+<h3>Reserveer hier!</h3>
+
+<form action="/forum_submit" method="POST">
+    <input type="hidden" name="creator" value="<%=creator%>">
+    Datum heen:<br>
+    <input type="text" placeholder="Datum heen" name="date1" id="date1"><br>
+    Datum terug:<br>
+        <input type="text" placeholder="Datum terug" name="date2" id="date2"><br>
+        Hoeveel personen:<br>
+        <input type="text" placeholder="Hoeveel personen" name="pers" id="pers"><br>
+    Caravan/tent/camper/Anders:<br>
+    <input type="text" name="options" id="options"><br>
+    <br>
+    <input type="submit" value="Submit">
+</form>
